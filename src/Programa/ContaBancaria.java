@@ -43,7 +43,7 @@ public class ContaBancaria {
     public String toString() {
         return "\nNúmero da conta: " + this.getNumeroConta() +
                 "\nCliente: " + this.cliente.getNome() +
-                "\nCPF: " + this.cliente.getEmail() +
+                "\nCPF: " + this.cliente.getCpf() +
                 "\nSaldo: " + Utils.doubleToString(this.getSaldo())+
                 "\n";
     }

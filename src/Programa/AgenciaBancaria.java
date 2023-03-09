@@ -125,8 +125,8 @@ public class AgenciaBancaria {
                 }
             } else {
                 System.out.println("Conta para transferência não encontrada!");
-                operacoes();
             }
+                operacoes();
         }
 
         public static void listarContas () {
