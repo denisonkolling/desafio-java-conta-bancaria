@@ -44,7 +44,6 @@ public class ContaBancaria {
         return "\nNúmero da conta: " + this.getNumeroConta() +
                 "\nCliente: " + this.cliente.getNome() +
                 "\nCPF: " + this.cliente.getEmail() +
-                "\nSaldo: " + this.cliente.getCpf()+
                 "\nSaldo: " + Utils.doubleToString(this.getSaldo())+
                 "\n";
     }
@@ -52,7 +51,7 @@ public class ContaBancaria {
     public void depositar(Double valor){
         if ( valor > 0){
             setSaldo(getSaldo() + valor);
-            System.out.println("Seu depósito foi realizado com sucesso!");
+            System.out.println("Depósito realizado com sucesso!");
         } else {
             System.out.println("Não foi possível realizar seu depósito!");
         }
