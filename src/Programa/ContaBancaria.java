@@ -2,6 +2,8 @@ package Programa;
 
 import Programa.utilitarios.Utils;
 
+import javax.swing.*;
+
 public class ContaBancaria {
 
     private static int contadorDeContas = 1000;
@@ -51,18 +53,18 @@ public class ContaBancaria {
     public void depositar(Double valor){
         if ( valor > 0){
             setSaldo(getSaldo() + valor);
-            System.out.println("Depósito realizado com sucesso!");
+            JOptionPane.showMessageDialog(null,"Depósito realizado com sucesso!");
         } else {
-            System.out.println("Não foi possível realizar seu depósito!");
+            JOptionPane.showMessageDialog(null,"Não foi possível realizar seu depósito!");
         }
     }
 
     public void sacar(Double valor){
         if ( valor > 0 && this.getSaldo() >= valor){
             setSaldo(getSaldo() - valor);
-            System.out.println("Saque realizado com sucesso!");
+            JOptionPane.showMessageDialog(null,"Saque realizado com sucesso!");
         } else {
-            System.out.println("Não foi possivel realizar seu saque");
+            JOptionPane.showMessageDialog(null,"Não foi possivel realizar seu saque");
 
         }
     }
@@ -71,9 +73,9 @@ public class ContaBancaria {
         if (valor > 0 && this.getSaldo() >= valor){
             setSaldo(getSaldo() - valor);
             contaParaDeposito.saldo = contaParaDeposito.getSaldo() + valor;
-            System.out.println("Transferência realizada com sucesso!");
+            JOptionPane.showMessageDialog(null, "Transferência realizada com sucesso!");
         } else {
-            System.out.println("Não foi possível realizar a tranferência!");
+            JOptionPane.showMessageDialog(null,"Não foi possível realizar a tranferência!");
         }
     }
 
